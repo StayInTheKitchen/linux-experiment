@@ -28,5 +28,5 @@ CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_REVOCATION_KEYS
 
 4. build
 ```bash
-make -j$(nproc) bzImage4. build
+make -j$(nproc) bzImage
 ```
