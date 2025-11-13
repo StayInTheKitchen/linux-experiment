@@ -30,3 +30,27 @@ CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_REVOCATION_KEYS
 ```bash
 make -j$(nproc) bzImage
 ```
+
+5. build modules
+```bash
+make modules
+```
+
+or
+
+```bash
+make localmodconfig
+```
+
+6. install modules
+```bash
+sudo make modules_install
+```
+
+7. install kernel
+```bash
+sudo make install
+```
+
+8. update GRUB configuration
+googling!
