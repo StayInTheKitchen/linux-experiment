@@ -19,14 +19,14 @@ scripts/config --disable SYSTEM_REVOCATION_KEYS
 
 or
 
-comment out CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_REVOCATION_KEYS
+comment out 
+
+```bash
+# .config
+CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_REVOCATION_KEYS
+```
 
 4. build
 ```bash
 make -j$(nproc) bzImage4. build
-```bash
-make -j$(nproc) bzImage4. build
-```bash
-make -j$(nproc) bzImage4. build
-```bash
-make -j$(nproc) bzImage
+```
