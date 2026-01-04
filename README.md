@@ -2,55 +2,6 @@
 linux-6.6.10 experiment
 
 ---
+# System Call experiment
+- add sys_children system call which returns the number of childern of current process
 
-# How to build kernel
-
-1. download kernel source tree & extract source tree
-2. kernel configuration (use current kernel configuration)
-```bash
-cp /boot/config-$(uname -r) .config
-make olddefconfig
-```
-3. modify .config
-```bash
-scripts/config --disable SYSTEM_TRUSTED_KEYS
-scripts/config --disable SYSTEM_REVOCATION_KEYS
-```
-
-or
-
-comment out 
-
-```bash
-# .config
-CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_REVOCATION_KEYS
-```
-
-4. build
-```bash
-make -j$(nproc) bzImage
-```
-
-5. build modules
-```bash
-make modules
-```
-
-or
-
-```bash
-make localmodconfig
-```
-
-6. install modules
-```bash
-sudo make modules_install
-```
-
-7. install kernel
-```bash
-sudo make install
-```
-
-8. update GRUB configuration
-googling!
