@@ -594,6 +594,7 @@ static void ps2_cleanup(struct ps2dev *ps2dev)
 irqreturn_t ps2_interrupt(struct serio *serio, u8 data, unsigned int flags) {
 	struct ps2dev *ps2dev = serio_get_drvdata(serio);
 	enum ps2_disposition rc;
+	printk(KERN_INFO "HAHAHAHA Find!");
 
 	rc = ps2dev->pre_receive_handler(ps2dev, data, flags);
 	switch (rc) {
